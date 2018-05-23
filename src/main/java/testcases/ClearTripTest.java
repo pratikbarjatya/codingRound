@@ -18,6 +18,7 @@ public class ClearTripTest extends CommonGlobals {
     ClearTripTest() {
         setDriverPath();
         driver = new ChromeDriver();
+        driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
         clearTripPage = PageFactory.initElements(driver, ClearTripPage.class);
     }

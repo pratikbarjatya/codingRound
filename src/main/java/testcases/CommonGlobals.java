@@ -4,6 +4,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.logging.Logger;
+
 /**
  * Common Globals
  *
@@ -27,7 +29,7 @@ public class CommonGlobals {
             WebDriverWait webDriverWait = new WebDriverWait(driver,durationInMilliSeconds);
             return webDriverWait.until(ExpectedConditions.visibilityOf(webElement));
         } catch (TimeoutException e) {
-            e.printStackTrace();
+            Logger.getLogger("Timeout Exception",e.toString());
             //To change body of catch statement use File | Settings | File Templates.
         }
         return null;
